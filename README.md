@@ -6,7 +6,7 @@ Submitted by: **Huynh Tan Dat**
 
 Time spent: **8** hours spent in total
 
-URL: **heroku-app-url**
+URL: **https://secure-earth-78498.herokuapp.com/**
 
 ## User Stories
 
