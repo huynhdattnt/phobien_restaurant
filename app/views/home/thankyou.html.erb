@@ -1,0 +1,29 @@
+<h1>Thank you for your order</h1>
+<% if @current_order %>
+	<table class='table'>
+    <thead>
+	    <tr>
+	    	<th>Food name</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Phone number</th>
+        <th>Address</th>
+        <th>Time</th>
+	    </tr>
+    </thead>
+      <tbody>
+        <tr>
+        	<td><%= @current_food_item.name %></td>
+          <td><%= @current_order.username %></td>
+          <td><%= @current_order.quantity %></td>
+          <td><%= @current_order.quantity * @current_food_item.price + 20000 %> VND </td>
+          <td><%= @current_order.phone_number %></td>
+          <td><%= @current_order.address %></td>
+          <td><%= @current_order.created_at.to_formatted_s(:long_ordinal)  %></td>
+        </tr>
+      </tbody>
+	</table>
+<% else %>
+	<div class='alert alert-info'>Something is wrong, please try again later!</div>
+<% end %>

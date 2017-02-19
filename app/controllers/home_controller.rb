@@ -18,5 +18,12 @@ class HomeController < ApplicationController
   	end
   end
 
+  def thankyou
+    @orders = Order.all
+    if params[:order_id].present?
+      @current_order = Order.find(params[:order_id])
+      @current_food_item = FoodItem.find(@current_order.food_item_id)
+    end
+  end
 
 end
